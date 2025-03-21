@@ -53,7 +53,7 @@ function submitForm() {
     });
 
     var client = new XMLHttpRequest();
-    client.open("POST", "https://dev303538.service-now.com/api/now/table/sn_lead_mgmt_core_lead?sysparm_fields=number");
+    client.open("POST", "https://dev303538.service-now.com/api/now/table/x_1492601_mahindra_lead?sysparm_fields=number%2Cfirst_name");
     client.setRequestHeader('Accept', 'application/json');
     client.setRequestHeader('Content-Type', 'application/json');
     client.setRequestHeader('Authorization', 'Basic ' + btoa('prateek.dev:Cyntexa@123'));
