@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahindra</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container" style="display: flex; position: sticky; top: 0px">
+        <a class="navbar-brand" href=""
+          ><img
+            src="./mahindraLogo-removebg-preview.png"
+            width="200px"
+            height="100px"
+            alt="logo"
+          />
+        </a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#home" onclick="showHome()">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#inquiry"
+              onclick="showForm('inquiryForm')"
+              >Inquiry</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#feedback"
+              onclick="showForm('feedbackForm')"
+              >Feedback</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div>
+      <div id="home">
+        <div
+          id="carouselExample"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="3000"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./Bolero Neo.webp"
+                class="d-block w-100"
+                alt="Bolero Neo"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./Bolero.webp"
+                class="d-block w-100"
+                alt="Bolero.webp"
+              />
+            </div>
+            <div class="carousel-item">
+              <img src="./ScorpioN.webp" class="d-block w-100" alt="ScorpioN" />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./Thar ROXX.png"
+                class="d-block w-100"
+                alt="Thar ROXX"
+              />
+            </div>
+            <div class="carousel-item">
+              <img src="./Thar.webp" class="d-block w-100" alt="Thar" />
+            </div>
+            <div class="carousel-item">
+              <img src="./XUV700.webp" class="d-block w-100" alt="XUV700" />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div id="inquiryForm" class="form-container" style="display: none">
+        <h2>Inquiry Form</h2>
+        <form id="inquiryFormElement">
+          <div class="mb-1">
+            <label class="form-label required">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inqFName"
+              required
+              oninput="validateText(this)"
+            />
+          </div>
+          <div class="mb-1">
+            <label class="form-label required">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inqLName"
+              required
+              oninput="validateText(this)"
+            />
+          </div>
+          <div class="mb-1">
+            <label class="form-label required">Email</label>
+            <input type="email" class="form-control" id="inqEmail" required />
+          </div>
+          <div class="mb-1">
+            <label class="form-label required">Mobile No.</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inqMobile"
+              required
+              maxlength="10"
+              oninput="validateMobile(this)"
+            />
+          </div>
+          <div class="mb-1">
+            <label class="form-label required">Model</label>
+            <select class="form-control" id="inqModel" required>
+              <option value="">Select Model</option>
+              <option value="Mahindra Bolero Neo">Mahindra Bolero Neo</option>
+              <option value="Mahindra ScorpioN">Mahindra ScorpioN</option>
+              <option value="Mahindra XUV400 EV">Mahindra XUV400 EV</option>
+              <option value="Mahindra Thar">Mahindra Thar</option>
+              <option value="Mahindra Thar Roxx">Mahindra Thar Roxx</option>
+              <option value="Mahindra Bolero">Mahindra Bolero</option>
+              <option value="Mahindra XUV700">Mahindra XUV700</option>
+            </select>
+          </div>
+          <div class="mb-1">
+            <label class="form-label required">Select Showroom</label>
+            <select class="form-control" id="inqShowroom" required>
+              <option value="">Select Showroom</option>
+              <option value="8b2ed712830026100fcd73d6feaad313">
+                Mahindra AutoWorld Sales Adarsh Nagar, Jaipur
+              </option>
+              <option value="44fe5752830026100fcd73d6feaad37a">
+                Mahindra AutoWorld Sales Pratap Nagar, Jaipur
+              </option>
+              <option value="cd0f5f9e83cce2100fcd73d6feaad38e">
+                Mahindra K S AutoMobiles Sales, Udaipur
+              </option>
+              <option value="f70f9f9e83cce2100fcd73d6feaad39b">
+                Mahindra Greenland Automotive Sales, Ajmer
+              </option>
+              <option value="402f9f9e83cce2100fcd73d6feaad39d">
+                Mahindra Param AutoMobiles Sales, Ajmer
+              </option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" onsubmit="">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="thankYouModal"
+      tabindex="-1"
+      aria-labelledby="thankYouModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="thankYouModalLabel">Success!</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/148/148767.png"
+              alt="Success Icon"
+              width="50"
+            />
+            <p class="mt-3">
+              Thank you for your inquiry! Our Sales Representative will reach
+              out to you shortly.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="existingLeadModal" tabindex="-1" aria-labelledby="existingLeadModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="existingLeadModalLabel">Lead Already Exists</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/565/565755.png" alt="Info Icon" width="50" />
+            <p class="mt-3">Our records show that a lead has already been created for this inquiry. A Sales Representative will reach out to you shortly.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
